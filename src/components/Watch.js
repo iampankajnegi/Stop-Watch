@@ -10,7 +10,7 @@ const Stopwatch = () => {
     if (isRunning) {
       timer = setInterval(() => {
         setTime(prevTime => prevTime + 1);
-      }, 2000);
+      }, 1000);
     }
     return () => clearInterval(timer);
   }, [isRunning]);
@@ -29,7 +29,7 @@ const Stopwatch = () => {
   };
 
   const formatTime = () => {
-    const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+    const minutes = Math.floor(time / 60).toString().padStart(1, '0');
     const seconds = (time % 60).toString().padStart(2, '0');
     return `${minutes}:${seconds}`;
   };
