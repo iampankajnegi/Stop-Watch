@@ -10,7 +10,7 @@ const Stopwatch = () => {
     if (isRunning) {
       timer = setInterval(() => {
         setTime(prevTime => prevTime + 1);
-      }, 4000);
+      }, 1000);
     }
     return () => clearInterval(timer);
   }, [isRunning]);
